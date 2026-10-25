@@ -1,0 +1,50 @@
+MINHA AGENDA - versão para publicar na internet e usar como app no iPhone
+==========================================================================
+
+ARQUIVOS (todos devem ficar juntos, na mesma pasta)
+  index.html            a agenda
+  manifest.webmanifest  nome e ícone do app
+  sw.js                 uso sem internet e anexos guardados no aparelho
+  apple-touch-icon.png, icon-192.png, icon-512.png   ícones
+
+1) PUBLICAR (escolha uma opção; o endereço precisa começar com https://)
+
+  Opção A - Netlify Drop (mais simples)
+    1. No computador, descompacte este zip.
+    2. Abra https://app.netlify.com/drop e arraste a PASTA com os arquivos.
+    3. Anote o endereço gerado (algo como https://nome-aleatorio.netlify.app).
+       Crie uma conta gratuita para o site não expirar.
+
+  Opção B - GitHub Pages
+    1. Crie um repositório público e envie os 6 arquivos para a raiz dele.
+    2. Em Settings > Pages, escolha a branch main e a pasta / (root).
+    3. O endereço será https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
+
+  Opção C - Cloudflare Pages: "Upload assets", envie a pasta.
+
+2) ADICIONAR À TELA DE INÍCIO DO IPHONE (use o SAFARI)
+    1. Abra o endereço no Safari.
+    2. Toque no botão Compartilhar (quadrado com seta para cima).
+    3. Role e toque em "Adicionar à Tela de Início".
+    4. Confirme o nome "Agenda" e toque em "Adicionar".
+    5. Abra sempre pelo ícone novo.
+
+3) SEUS DADOS
+  - Os compromissos e notas ficam SOMENTE no seu iPhone. Nada é enviado ao servidor.
+  - O app instalado na Tela de Início tem armazenamento próprio: ele começa vazio,
+    mesmo que você tenha aberto o endereço antes no Safari.
+  - Para trazer o que você já tem na agenda do Claude: lá, toque em "..." > Mais >
+    Exportar. Depois, no app novo, "..." > Mais > Importar. (Os anexos da versão
+    do Claude não vêm junto; compromissos e notas sim.)
+  - Faça backup de vez em quando: "..." > Mais > Exportar, e guarde o arquivo
+    em Arquivos/iCloud. Apagar o app apaga os dados.
+  - Os backups feitos neste app incluem os anexos.
+
+4) AVISOS
+  Os lembretes tocam e aparecem enquanto o app estiver aberto. O iPhone não permite
+  que este tipo de app toque com ele fechado.
+
+5) ATUALIZAR
+  Para publicar uma versão nova do index.html, troque "agenda-shell-v1" por
+  "agenda-shell-v2" (e assim por diante) no arquivo sw.js e envie os arquivos de novo.
+  No iPhone, feche e abra o app duas vezes para a versão nova aparecer.
